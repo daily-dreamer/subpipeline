@@ -29,8 +29,6 @@ spec:
         - |
           set -e -o pipefail;
           echo "Hey $LOCALRUN"
-          echo "Deploying to $CLUSTER";
-      
           echo '::debug:: cocoa-cli | index.ts:74:12 | {"type":"ibm_toolchain_pipeline_devsecops_cli_commands_count","data":{"value":"1","ibm_toolchain_pipeline_devsecops_run_id":"6267af51-eaa2-4e20-b614-6551fa01ab10","ibm_toolchain_pipeline_devsecops_pipeline_type":"ci-pipeline","ibm_toolchain_pipeline_devsecops_pipeline_version":"","ibm_toolchain_pipeline_devsecops_toolchain_id":"83e66ca0-afa7-44a0-bb80-a81a5786fe53","ibm_toolchain_pipeline_devsecops_pipeline_id":"13045bb0-9df4-423f-8e78-29653b049462"}}';
           echo '::debug:: cocoa-cli | index.ts:74:12 | {"type":"ibm_toolchain_pipeline_devsecops_core_pipeline_evaluation_time_summary","data":{"value":"306950","ibm_toolchain_pipeline_devsecops_run_id":"6267af51-eaa2-4e20-b614-6551fa01ab10","ibm_toolchain_pipeline_devsecops_pipeline_type":"ci-pipeline","ibm_toolchain_pipeline_devsecops_pipeline_version":"","ibm_toolchain_pipeline_devsecops_toolchain_id":"83e66ca0-afa7-44a0-bb80-a81a5786fe53","ibm_toolchain_pipeline_devsecops_pipeline_id":"13045bb0-9df4-423f-8e78-29653b049462"}}';
           echo '::debug:: cocoa-cli | index.ts:74:12 | {"type":"ibm_toolchain_pipeline_devsecops_metric_print_time_summary","data":{"value":"343","ibm_toolchain_pipeline_devsecops_run_id":"6267af51-eaa2-4e20-b614-6551fa01ab10","ibm_toolchain_pipeline_devsecops_pipeline_type":"ci-pipeline","ibm_toolchain_pipeline_devsecops_pipeline_version":"","ibm_toolchain_pipeline_devsecops_toolchain_id":"83e66ca0-afa7-44a0-bb80-a81a5786fe53","ibm_toolchain_pipeline_devsecops_pipeline_id":"13045bb0-9df4-423f-8e78-29653b049462"}}';
@@ -406,11 +404,5 @@ spec:
           echo 'all metrics are dumped'
           
           echo "Oh and $ANOTHERV";
-          echo "Small Pause!";
-          sleep 5s;
-          echo "Done!";
-          for i in {1..3} ; do
-          echo "Round $i";
-          ls;
           sleep 5s;
           done
