@@ -28,10 +28,6 @@ spec:
       args:
         - |
           set -e -o pipefail;
-          echo "Hey $LOCALRUN"
-          echo "Deploying to $CLUSTER";
-      
-
           echo '::debug:: cocoa-cli | index.ts:73:12 | {"type" : "ibm_toolchain_pipeline_devsecops_core_git_clone_time_summary","data":{"value":"124","ibm_toolchain_pipeline_devsecops_run_id":"073ee7d3-9e04-4a46-a0a5-93d1e3a172ab","ibm_toolchain_pipeline_devsecops_pipeline_version":"v11","ibm_toolchain_pipeline_devsecops_toolchain_id":"738498237","ibm_toolchain_pipeline_devsecops_pipeline_id":"23561","ibm_toolchain_pipeline_type":"ci"}}';
           echo '::debug:: cocoa-cli | index.ts:73:12 | {"type" : "ibm_toolchain_pipeline_devsecops_core_change_request_process_time_summary", "data" :{"value":"165961","ibm_toolchain_pipeline_devsecops_run_id":"073ee7d3-9e04-4a46-a0a5-93d1e3a172ab","ibm_toolchain_pipeline_devsecops_pipeline_version":"v11","ibm_toolchain_pipeline_devsecops_toolchain_id":"738498237","ibm_toolchain_pipeline_devsecops_pipeline_id":"23561","ibm_toolchain_pipeline_type":"ci"}}';
           echo '::debug:: cocoa-cli | index.ts:73:12 | {"type" : "ibm_toolchain_pipeline_devsecops_core_pipeline_evaluation_time_summary", "data":{"value":"165961","ibm_toolchain_pipeline_devsecops_run_id":"073ee7d3-9e04-4a46-a0a5-93d1e3a172ab","ibm_toolchain_pipeline_devsecops_pipeline_version":"v11","ibm_toolchain_pipeline_devsecops_toolchain_id":"738498237","ibm_toolchain_pipeline_devsecops_pipeline_id":"23561","ibm_toolchain_pipeline_type":"pr"}}'; 
@@ -47,14 +43,7 @@ spec:
           echo '::debug:: cocoa-cli | index.ts:73:12 | {"type" : "ibm_toolchain_pipeline_devsecops_cli_github_api_calls_count", "data" : {"value": "1", "ibm_toolchain_pipeline_devsecops_run_id":"073ee7d3-9e04-4a46-a0a5-93d1e3a172ab","ibm_toolchain_pipeline_devsecops_pipeline_type":"ci", "ibm_toolchain_pipeline_devsecops_pipeline_version":"v11","ibm_toolchain_pipeline_devsecops_toolchain_id":"738498237","ibm_toolchain_pipeline_devsecops_pipeline_id":"23561"}}';
           echo '::debug:: cocoa-cli | index.ts:73:12 | {"type" : "ibm_toolchain_pipeline_devsecops_cli_cos_api_call_count", "data" : {"value": "1", "ibm_toolchain_pipeline_devsecops_run_id":"073ee7d3-9e04-4a46-a0a5-93d1e3a172ab","ibm_toolchain_pipeline_devsecops_pipeline_type":"ci", "ibm_toolchain_pipeline_devsecops_pipeline_version":"v11","ibm_toolchain_pipeline_devsecops_toolchain_id":"738498237","ibm_toolchain_pipeline_devsecops_pipeline_id":"23561"}}';
           echo '::debug:: cocoa-cli | index.ts:73:12 | {"type" : "ibm_toolchain_pipeline_devsecops_scanners_list", "data" : {"value": "1","ibm_toolchain_pipeline_devsecops_run_id":"073ee7d3-9e04-4a46-a0a5-93d1e3a172ab", "ibm_toolchain_pipeline_devsecops_detect_secrets_scan" : "1", "ibm_toolchain_pipeline_devsecops_has_cra_scan" : "1", "ibm_toolchain_pipeline_devsecops_has_mend_ua_scan" : "1", "ibm_toolchain_pipeline_devsecops_has_sonarqube_scan" : "1", "ibm_toolchain_pipeline_devsecops_has_mend_sast_scan" : "1", "ibm_toolchain_pipeline_devsecops_has_gosec_scan" : "1", "ibm_toolchain_pipeline_devsecops_has_fips_sast_scan" : "1", "ibm_toolchain_pipeline_devsecops_has_va_scan" : "1", "ibm_toolchain_pipeline_devsecops_has_xray_scan" : "1", "ibm_toolchain_pipeline_devsecops_has_sysdig_scan" : "1","ibm_toolchain_pipeline_devsecops_pipeline_type":"ci", "ibm_toolchain_pipeline_devsecops_pipeline_version":"v11","ibm_toolchain_pipeline_devsecops_toolchain_id":"738498237","ibm_toolchain_pipeline_devsecops_pipeline_id":"23561"}}';
+          echo '::debug:: cocoa-cli | index.ts:73:12 | {"type":"ibm_toolchain_pipeline_devsecops_total_pipeline_time_summary","data":{"value":"0","ibm_toolchain_pipeline_devsecops_run_id":"69fd1bd6-81e8-43e4-b5c5-5543e6ea80cc","ibm_toolchain_pipeline_devsecops_pipeline_type":"ci-pipeline","ibm_toolchain_pipeline_devsecops_pipeline_version":"","ibm_toolchain_pipeline_devsecops_toolchain_id":"83e66ca0-afa7-44a0-bb80-a81a5786fe53","ibm_toolchain_pipeline_devsecops_pipeline_id":"13045bb0-9df4-423f-8e78-29653b049462"}}'
           echo 'all metrics are dumped'
-          
-          echo "Oh and $ANOTHERV";
-          echo "Small Pause!";
-          sleep 5s;
-          echo "Done!";
-          for i in {1..3} ; do
-          echo "Round $i";
           ls;
-          sleep 5s;
           done
